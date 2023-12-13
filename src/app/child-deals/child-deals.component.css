@@ -1,0 +1,42 @@
+.imag1{
+  width: 100%;
+
+}
+.cards{
+  width: 350px;
+  height: 276px;
+}
+.pDeal{
+  color:#83859C;
+  margin-left: 18px;
+  width: auto;
+
+}
+.s1{
+  margin-right: 16px;
+  width: 50px;
+}
+.s2{
+  width: 12px;
+  margin-left: 0px;
+  margin-top: 5px;
+  padding: 0%;
+}
+
+.items{
+  margin-left: 16px;
+  width: 80px;
+  height: 24px;
+  background-color: #EDEEF2;
+  border-radius: 16px;
+}
+.textItem{
+text-align: left;
+font-size: 9px;
+width: 30px;
+height: 16px;
+margin-top: 5px;
+padding: 0%;
+
+
+}

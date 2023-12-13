@@ -1,0 +1,36 @@
+
+<div class="row page1" style="display: flex; justify-content: space-around;">
+    <div class="col-md-4 logMain">
+      <img class="logo1" src="./assets/images/main.png" alt="">
+      <h1 class="logoText">Login</h1>
+      <p class="textLog">Sign in with your data that you entered during your registration</p>
+      <form action="" (ngSubmit)="onSubmit()">
+        <div class="EP">
+          <label id="l1" for="">email</label>
+          <br>
+          <input class="inputLog" type="text" name="email" [(ngModel)]="user.email" required>
+        </div>
+        <div class="EP">
+          <label id="l1"  for="">password</label>
+          <br>
+          <input class="inputLog" type="password" name="password" [(ngModel)]="user.password">
+        </div>
+        <div class="EP">
+        <input type="checkbox" name="field name" value="Initial value" name="keepLogIn" [(ngModel)]="keepLogIn">
+        <label for="">Keep me logged in</label>
+      </div>
+      <button type="submit" >Login</button>
+     <a href="#" id="forgetLink">Forgot password</a>
+      </form>
+    </div>
+    <div class="col-md-8 col-sm-12 decoret">
+      <img id="img1" src="./assets/images/media.png" alt="" style="height: 860px; width: 800px;">
+    </div>
+
+  </div>
+
+
+<!-- <p id="signUpP">Don’t have an account? <a href="#">Sign up</a></p> -->
+
+
+

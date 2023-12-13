@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+<hr>
+<div  style="display: flex;flex-wrap: wrap; justify-content: space-around; margin-top: 10px;">
+  <div *ngFor="let i of itemes"   style=" width: 355px; height: auto; border-radius: 8px; border: 1px solid; display: flex; flex-direction: column; align-items: center; margin-top: 10px;">
+    <img src="./assets/images/deals/img mask.png" alt="">
+    <p style="margin-top: 5px;">{{i.title}}</p>
+    <div style="display: flex; justify-content: space-around; width: 355px;">
+      <p>{{i.time}} min</p>
+      <p>{{i.price}} . dollar</p>
+    </div>
+    <p>{{i.category}}</p>
+    <div style="display: flex; justify-content: space-around; width: 355px; margin-bottom: 5px;">
+      <button id="des2" data-bs-toggle="modal" attr.data-bs-target="#myModal{{i.id}}" >update</button>
+      <!-- <div *ngIf="deletingStatus[i.id]"><p>waiting</p></div> -->
+    <button  id="des1"   class="btn btn-primary" data-bs-toggle="modal" attr.data-bs-target="#myDeleteModal{{i.id}}">delete</button>
+    </div>
+
+    <div class="modal" [id]="'myModal'+i.id">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">{{i.title}}</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form >
+              <label for="">current time: {{i.id}}</label> <br>
+              <label for="">current time: {{i.time}}</label> <br>
+              <label for="" style="margin-right: 5px;">new Time: </label><input type="text" name="newTime" [(ngModel)]="newTime">
+              <button data-bs-dismiss="modal" style="margin-left: 5px;" id="des2" (click)="updateTime(i.id,newTime)">update</button>
+            </form>
+          </div>
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div [id]="'myDeleteModal'+i.id" class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">{{i.title}}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Are you sure
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" (click)="deleteItem(i.id)" data-bs-dismiss="modal" class="btn btn-primary ">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<!-- <div style="display: flex; justify-content: space-around;">
+  <div><p>h</p></div>
+  <div><p>jhk</p></div>
+</div> -->

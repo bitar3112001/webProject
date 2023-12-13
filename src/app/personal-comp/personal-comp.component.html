@@ -1,0 +1,83 @@
+<div class="personalMain">
+  <p class="Ptitle">Personal information</p>
+  <div style="color: #545563; font-size: 12px; font-family: Nunito; font-weight: 600; line-height: 16px; word-wrap: break-word">Avatar</div>
+  <div style="display: flex; flex-wrap: wrap; margin-top: 8px;">
+    <img class="imagAvatar" src="./assets/images/img.png" alt="">
+    <button class="changeButton"> Change</button>
+    <button class="removeButton">Remove</button>
+  </div>
+<form style="margin-top: 16px;" action="" (ngSubmit)="onSubmit()">
+<div class="row">
+<div class="col">
+  <label class="labelInfo" for="" >First name</label>
+  <br>
+  <input class="input1" type="text" name="username" [(ngModel)]="users.username">
+</div>
+<div class="col">
+  <label class="labelInfo" for="">Last name</label>
+  <br>
+  <input class="input1" type="text" >
+</div>
+</div>
+<div class="row" style="margin-top: 32px;">
+  <div class="col">
+    <label class="labelInfo" for=""  >Email</label>
+    <br>
+    <input class="input1" type="text" name="email" [(ngModel)]="users.email">
+  </div>
+  <div class="col">
+    <label class="labelInfo" for="" >Password</label>
+    <br>
+    <input class="input1" type="text" name="password"  [(ngModel)]="users.password">
+  </div>
+  </div>
+<label class="emailLabel" for="" style="margin-top: 48px;">Email notification</label>
+<div class="row checkInput" style="margin-top: 16px;">
+<div class="col" style="display: flex;">
+  <input class="inputCheck" type="checkbox" name="field name" value="Initial value" name="newdeals" [(ngModel)]="checket.newdeals">
+  <label style="margin-left: 5px;" class="labelCheck" for="" >New deals</label>
+</div>
+<div class="col" style="display: flex;">
+  <input class="inputCheck" type="checkbox" name="field name" value="Initial value">
+  <label style="margin-left: 5px;" class="labelCheck" for="">Password changes</label>
+</div>
+</div>
+<div class="row checkInput" style="margin-top: 24px;">
+  <div class="col" style="display: flex; ">
+    <input class="inputCheck" type="checkbox" name="field name" value="Initial value">
+    <label style="margin-left: 5px;" class="labelCheck" for="">New resturants</label>
+  </div>
+  <div class="col" style="display: flex;">
+    <input class="inputCheck" type="checkbox" name="field name" value="Initial value">
+    <label style="margin-left: 5px;" class="labelCheck" for="">Special offers</label>
+  </div>
+  </div>
+  <div class="row checkInput" style="margin-top: 24px;">
+    <div class="col" style="display: flex;">
+      <input class="inputCheck" type="checkbox" name="field name" value="Initial value">
+      <label style="margin-left: 5px;" class="labelCheck" for="">Order statuses</label>
+    </div>
+    <div class="col" style="display: flex;">
+      <input class="inputCheck" type="checkbox" name="field name" value="Initial value">
+      <label style="margin-left: 5px;" class="labelCheck" for="">Newsletter</label>
+    </div>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 5px;">
+      <div style="margin-top: 5px;">
+        <button class="logoutButton" (click)="logOut()" >log out</button>
+        <button class="discardChangesButton">Discard changes</button>
+      </div>
+    <button (click)="onUpdateData()"   class="saveChangeButton">Save changes</button>
+    </div>
+</form>
+<!-- <div id="toasts1"  class="toast show">
+  <div class="toast-header">
+    <strong class="me-auto">Toast Header</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+  </div>
+  <div class="toast-body">
+    <p>Some text inside the toast body</p>
+  </div>
+</div> -->
+
+</div>

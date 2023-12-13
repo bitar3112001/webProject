@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<body style="margin-top: 5px;">
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()" style="display: flex; flex-direction: column; align-content: center; flex-wrap: wrap; width: 500px; border: 1px solid black; border-radius: 8px;">
+  <label for="#" style="align-self: center; width: 100px; font-size: 24px;">Add Item</label>
+  <div style="display: flex; justify-content: space-around; align-items: center; margin-top: 5px; width: 400px;">
+    <label for="itemTitle">Item title: </label>
+    <input class="inputForm" type="text" id="itemTitle" formControlName="title"/>
+  </div>
+  <div style="display: flex; justify-content: space-around; align-items: center; margin-top: 5px; width: 400px;">
+  <label for="itemTime">Time: </label>
+  <input class="inputForm" type="text" id="itemTime" formControlName="time">
+</div>
+<div style="display: flex; justify-content: space-around; align-items: center; margin-top: 5px; width: 400px;">
+  <label for="itemPrice">Price: </label>
+  <input class="inputForm" type="number" id="itemPrice" formControlName="price">
+</div>
+<div style="display: flex; justify-content: space-around; align-items: center; margin-top: 5px; width: 400px;">
+  <label for="itemCategory">Category: </label>
+  <input class="inputForm" type="text" id="itemCategory" formControlName="category">
+</div>
+<button type="submit" style="width:100px; align-self: center; margin-top: 10px; margin-bottom: 10px; border-radius: 8px;">Add</button>
+</form>
+</body>

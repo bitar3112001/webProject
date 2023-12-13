@@ -1,0 +1,33 @@
+.category_container{
+  margin-top: 32px;
+margin-left: 160px;
+}
+
+.category1{
+
+background-color: #ffffff;;
+border: 2px solid #4E60FF;
+border-radius: 16px;
+margin-right: 30px;
+margin-left: 30px;
+}
+img{
+  margin-top: 14px;
+  margin-left: 50px;
+  width: 24px;
+  height: 24px;
+}
+p{
+  width: 128px;
+  height: 18px;
+  color: #4E60FF;
+  font-size: 13px;
+  font-family: Nunito;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.10px;
+  word-wrap: break-word;
+  text-align: center;
+  margin-top: 12px;
+
+}
